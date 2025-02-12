@@ -1,0 +1,111 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 42px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+form > div > label {
+  font-family: sans-serif;
+  display: block;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+input {
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 4px 8px;
+}
+
+input:focus-visible {
+  border: hidden;
+}
+
+button {
+  border: 1.5px solid white;
+  background-color: transparent;
+  border-radius: 24px;
+  color: lightgray;
+  padding: 8px;
+  margin: 20px 0;
+}
+
+button:hover {
+  background-color: white;
+  color: #222;
+  transition: all 0.4s ease;
+}
+
+label > a {
+  text-align: center;
+  text-decoration: none;
+  color: #c6c6c6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+header > nav > a {
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto 12px auto;
+}
+footer > span {
+  margin-left: 4px;
+}
+
+/*Reset Password*/
+
+.container-reset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+}
+.container-reset > input {
+  width: 280px;
+  color: gray;
+}
