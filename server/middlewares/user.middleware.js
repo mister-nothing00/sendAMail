@@ -13,13 +13,13 @@ export const protectRoute = async (req, res, next) => {
 
     const decodedData = jwt.verify(token, process.env.JWT_SECRET);
 
-    if (!decodedData || !decodedData?.id) {
+    if (!decodedData || !decodedData.id) {
       return res.status(403).json({
         message: "Forbidden, Token valid but without the necessary permissions",
       });
     }
 
-    req.user = await User.findById(decodedData.id);
+    req.user = await User.findById(decodedData?.id);
 
     next();
   } catch (error) {

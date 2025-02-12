@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import connectDB from "./server/database/user.db.js";
+import path from "path";
+
 
 dotenv.config();
 
@@ -16,7 +18,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "http://localhost:5173",
-    methods: ["POST", "GET", "PUT", "DELETE"],
+    methods: ["POST","GET", "PUT"],
   })
 );
 
@@ -24,6 +26,15 @@ app.use(
 import UserRoute from "./server/routers/user.route.js";
 
 app.use("/api/user", UserRoute);
+
+
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 //LISTENER APP
 
