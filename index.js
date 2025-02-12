@@ -4,8 +4,6 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import connectDB from "./server/database/user.db.js";
 
-//Configuration file .env
-
 dotenv.config();
 
 const app = express();
@@ -23,8 +21,7 @@ app.use(
 );
 
 //ROUTES USER
-import UserRoute from "./server/routers/user.route.js"
-
+import UserRoute from "./server/routers/user.route.js";
 
 app.use("/api/user", UserRoute);
 

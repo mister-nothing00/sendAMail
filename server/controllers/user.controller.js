@@ -1,8 +1,8 @@
 import { User } from "../models/user.model.js";
-import bcrypt from "bcrypt";
 import generateToken from "../utils/generateToken.js";
 import { generateResetToken } from "../utils/generateResetToken.js";
 import { sendEmail } from "../utils/SendEmail.js";
+import bcrypt from "bcrypt";
 
 export const registerUser = async (req, res) => {
   const { username, email, password } = req.body;
@@ -74,7 +74,7 @@ export const myProfile = async (req, res) => {
 export const logoutUser = (req, res) => {
   res.cookie("token", "", { maxAge: 0 });
 
-  return res.status(200).json({ message: "User logout, successfully !" });
+  return res.status(200).json({ message: "Logout successfully! 👋" });
 };
 
 export const resetPassword = async (req, res) => {
@@ -100,18 +100,15 @@ export const resetPassword = async (req, res) => {
       `Clicca qui per resettare la password: ${resetLink}`
     );
 
-    res.status(200).json({ message: "Recovery email sent!" });
+    res.status(200).json({ message: "Recovery email sent! 📩" });
   } catch (error) {
     res.status(500).json({ message: "Internal server error, retry!" });
   }
 };
 export const resetPasswordDinamic = async (req, res) => {
-  const { newPassword } = req.body; 
+  const { newPassword } = req.body;
   const { token } = req.params;
 
-  console.log("Request body:", req.body); // Aggiungi per vedere cosa riceve il backend
-  console.log("Received new password:", newPassword);
-  
   if (!newPassword) {
     return res.status(400).json({ message: "New password is required." });
   }
@@ -135,9 +132,8 @@ export const resetPasswordDinamic = async (req, res) => {
 
     await user.save();
 
-    res.status(200).json({ message: "Password updated successfully!" });
+    res.status(200).json({ message: "Password updated successfully! ✅" });
   } catch (error) {
-    console.error("Error during password reset:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };

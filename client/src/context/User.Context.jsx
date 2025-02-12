@@ -17,9 +17,7 @@ export const UserProvider = ({ children }) => {
       setUser(data.user);
       setIsAuth(true);
     } catch (error) {
-      toast.error(
-        error.response?.data?.message || "Errore nel caricamento del profilo ❌"
-      );
+      toast.error(error.response?.data?.message || "Error loading profile ❌");
       setUser(null);
       setIsAuth(false);
     }
@@ -35,10 +33,10 @@ export const UserProvider = ({ children }) => {
 
       setUser(data.user);
       setIsAuth(true);
-      toast.success("Registrazione avvenuta con successo! 🎉");
+      toast.success(data.message || "Registration successful! 🎉");
     } catch (error) {
       toast.error(error.response?.data?.message || "Registrazione fallita ❌");
-      setUser("");
+      setUser(null);
       setIsAuth(false);
     } finally {
       setLoading(false);
@@ -51,10 +49,10 @@ export const UserProvider = ({ children }) => {
 
       setUser(data.user);
       setIsAuth(true);
-      toast.success(`Bentornato, ${data.user.username}! 👋`);
+      toast.success(`Bentornato, ${data.user?.username}! 👋`);
     } catch (error) {
-      toast.error(error.response?.data?.message || "Login fallito ❌");
-      setUser("");
+      toast.error(error.response?.data?.message || "Login failed ❌");
+      setUser(null);
     } finally {
       setLoading(false);
     }
@@ -63,12 +61,12 @@ export const UserProvider = ({ children }) => {
   const logoutUser = async () => {
     try {
       await axios.get("/api/user/logout");
-      setUser("");
+      setUser(null);
       setIsAuth(false);
-      toast.success("Logout effettuato con successo! 👋");
+      toast.success(data.message || "Logout successfully! 👋");
     } catch (error) {
       toast.error(
-        error.response?.data?.message || "Errore durante il logout ❌"
+        error.response?.data?.message || "Error logging out ❌"
       );
     } finally {
       setLoading(false);
