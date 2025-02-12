@@ -97,7 +97,7 @@ export const resetPassword = async (req, res) => {
 
     await user.save();
 
-    const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetLink = `https://sendanemail.onrender.com/reset-password/${resetToken}`;
     await sendEmail(
       email,
       "Reset Password",
