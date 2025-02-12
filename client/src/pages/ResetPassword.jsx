@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import "./style.pages.css";
 import { UserData } from "../context/User.Context";
 import { FaArrowLeft } from "react-icons/fa";
@@ -50,7 +50,7 @@ function ResetPassword() {
             type="submit"
            
           >
-            {loading ? "Loading..." : "Invia email"}
+            {loading ? "Invia email" : "Loading..."}
           </button>
         </form>
 

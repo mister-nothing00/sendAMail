@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   height: 100vh;
   width: 50%;
   margin: auto;
@@ -108,4 +107,21 @@ footer > span {
 .container-reset > input {
   width: 280px;
   color: gray;
+}
+
+#reset-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+}
+
+.container-reset-password > form > input:first-child {
+  margin-right: 20px;
+}
+.container-reset-password > form > input:nth-child(2){
+  margin-right: 10px ;
 }

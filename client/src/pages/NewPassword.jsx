@@ -40,25 +40,32 @@ export default function NewPassword() {
   };
 
   return (
-    <div>
+    <div id="reset-password">
       <h1>Reset your password</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="password"
-          placeholder="New password"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Confirm new password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
-        <button type="submit" >
-          {loading ? "Update Password" :"Updating..."}
-        </button>
-      </form>
+      <p>
+        Sunt sunt consectetur veniam eu non adipisicing nisi. Incididunt aliqua
+        anim anim commodo incididunt laboris enim. Et nulla veniam cillum ex est
+        culpa.
+      </p>
+      <div className="container-reset-password">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="password"
+            placeholder="New password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Confirm new password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <button type="submit">
+            {loading ? "Update Password" : "Updating..."}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

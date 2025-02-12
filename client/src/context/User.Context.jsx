@@ -61,7 +61,7 @@ export const UserProvider = ({ children }) => {
   const logoutUser = async () => {
     try {
       await axios.get("/api/user/logout");
-      setUser(null);
+      setUser("");
       setIsAuth(false);
       toast.success(data.message || "Logout successfully! 👋");
     } catch (error) {

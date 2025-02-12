@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { UserData } from "./context/User.Context";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import ResetPassword from "./pages/ResetPassword";
-import { UserData } from "./context/User.Context";
 import NewPassword from "./pages/NewPassword";
 
 function App() {
