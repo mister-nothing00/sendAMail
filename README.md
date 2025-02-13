@@ -1,20 +1,34 @@
-# Send a Mail
+# ✉️ Send a Mail
 
-**Send a Mail** is a project that allowed me to deepen my knowledge in web app development, applying best practices and improving my technical skills. This project was created to allow users to send and receive a password reset email, including features such as registration, login and logout.
+**Send a Mail** is a project that allowed me to deepen the development of **web apps**, applying **best practices** and improving my **technical skills**. The main goal is to allow users to send and receive **password reset emails**, with **registration, login and logout** features.
 
-## Technologies used
+---
 
-The project was developed using the **MERN** stack, which includes:
+## 🚀 Technologies Used
 
-- **MongoDB**: A NoSQL database to store users and their login information.
-- **Express**: A web framework for Node.js, used to create the server and handle HTTP requests.
-- **React**: A JavaScript library to build the frontend user interface.
-- **Node.js**: A JavaScript runtime to execute the server-side code.
-- **react-hot-toast**: A library to display notification messages in the frontend, used to show feedback on events such as registration, login and password reset.
+The project was developed using the **MERN** stack:
 
-## Features
+🔹 **MongoDB** → NoSQL database for storing users and credentials
+🔹 **Express.js** → Node.js framework used to handle APIs and HTTP requests
+🔹 **React** → JavaScript library for creating the user interface
+🔹 **Node.js** → JavaScript runtime to execute server-side code
+🔹 **react-hot-toast** → Library for real-time notifications (registration, login, password reset)
 
-- **Registration and Login**: Users can register, login and receive error or success messages via notifications.
-- **Password Reset**: Users can reset their password, which will be updated in the database.
-- **Real-time Notifications**: The project uses `react-hot-toast` to display success or error messages to the frontend during operations (registration, login, password reset).
-- **Email Sending Prototype**: Even though the main focus was on user management, a logic was implemented to send a reset email.
+---
+
+## ✨ Features
+
+✔️ **Registration and Login** → Users can register and authenticate with real-time feedback
+✔️ **Password Reset Password** → Ability to reset password and update it in database
+✔️ **Real Time Notifications** → Use of `react-hot-toast` to show success or error messages
+✔️ **Send Reset Email** → Implement logic to send password reset email
+
+---
+
+## 📌 Notes
+
+📌 The project is a **prototype** with email sending logic implemented, but may require an external SMTP service to handle real emails.
+
+---
+
+🔥 **Ready to use?** Download the code and try it now! 🚀
