@@ -32,4 +32,4 @@ The project was developed using the **MERN** stack:
 ---
 
 🔥 **Ready to use?** Click below on link and try it now! 🚀
-![](https://sendanemail.onrender.com)
+## 🌐 [Try Send a Mail Live](https://sendanemail.onrender.com)
